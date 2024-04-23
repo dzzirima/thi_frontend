@@ -11,7 +11,6 @@ export default function Home() {
       <TopBar/>
       <CenterBlock/>
       <ParcelTracker/>
-
       <Footer/>
     </main>
   );

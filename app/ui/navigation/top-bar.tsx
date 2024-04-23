@@ -1,6 +1,7 @@
 import { Heading, HeadingGroup, Text } from "rsuite";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Link from 'next/link'
 
 export default function TopBar() {
   return (
@@ -24,7 +25,10 @@ export default function TopBar() {
           <Button variant="outlined">Contact Us</Button>
         </div>
         <div>
-          <Button variant="contained">Get Started</Button>
+        <Link href="/dashboard">
+          <Button  variant="contained">Get Started</Button>
+        </Link>
+          {/* <Button type="" variant="contained">Get Started</Button> */}
         </div>
       </div>
     </div>
