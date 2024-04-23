@@ -18,8 +18,8 @@ const links = [
     icon: ReceiptIcon,
   },
   { name: 'Customers', href: '/dashboard/customers', icon: PersonIcon },
-  { name: 'Discounts', href: '/dashboard/customers', icon: LocalOfferIcon },
-  { name: 'Analytics', href: '/dashboard/customers', icon: BarChartIcon },
+  { name: 'Discounts', href: '/dashboard/discounts', icon: LocalOfferIcon },
+  { name: 'Analytics', href: '/dashboard/analytics', icon: BarChartIcon },
 ];
 
 export default function NavLinks() {
