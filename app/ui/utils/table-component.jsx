@@ -26,8 +26,6 @@ export default function TableComponent({
       },
 
       
-
-      
     }),
     muiTableBodyRowProps:({row}) =>({
       sx: {
