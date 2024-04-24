@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ui/utils/table-component.jsx", "app/ui/utils/columns/order-columns.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ui/utils/table-component.jsx", "app/ui/utils/columns/order-columns.jsx", "app/ui/orders/new-order-form.jsx"],
   "exclude": ["node_modules"]
 }

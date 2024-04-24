@@ -1,7 +1,7 @@
 import { DatePicker, DateRangePicker } from "rsuite";
 import "rsuite/dist/rsuite.css";
 
-export default function MyDatePicker({name}:{
+export default function MyDateRangePicker({name}:{
     name: string
 }) {
   return (
