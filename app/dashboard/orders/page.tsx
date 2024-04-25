@@ -255,7 +255,6 @@ export default function Orders() {
       <div className=""> 
 
       <TableComponent  data={orderData} tableColumns={orderColumns} tableHieght={null} handleOnRowClick={null}/>
-      
       </div>
     </div>
   );
