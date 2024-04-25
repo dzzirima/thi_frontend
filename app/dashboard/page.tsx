@@ -10,13 +10,17 @@ import AddIcon from "@mui/icons-material/Add";
 import StoreIcon from "@mui/icons-material/Store";
 import PaymentIcon from "@mui/icons-material/Payment";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
-import StarsIcon from '@mui/icons-material/Stars';
-import Card from '@mui/material/Card';
+import StarsIcon from "@mui/icons-material/Stars";
+import Card from "@mui/material/Card";
+import Link from "next/link";
 
 export default function DashBoard() {
   return (
     <div className="flex flex-col">
-      <div className="font-black"> <Typography variant="h6"> BlackRock Investiments</Typography></div>
+      <div className="font-black">
+        {" "}
+        <Typography variant="h6"> BlackRock Investiments</Typography>
+      </div>
       <div className="flex flex-row">
         <div className=" flex mt-4 left w-3/4  ">
           <div className="flex flex-col">
@@ -56,9 +60,11 @@ export default function DashBoard() {
               <div className="flex flex-row w-full justify-between p-10">
                 <div className="title flex"> Order</div>
                 <div className="addicon flex">
-                  <IconButton>
-                    <AddIcon color="info" />
-                  </IconButton>
+                  <Link href="/dashboard/orders/new">
+                    <IconButton>
+                      <AddIcon color="info" />
+                    </IconButton>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -100,24 +106,33 @@ export default function DashBoard() {
                 <Button variant="contained"> Upgrade</Button>
               </div>
             </div>
-         
+
             <div className="flex row justify-between mt-10">
               <div className="flex">
-                <div className=" mr-1"> <StarsIcon/> </div>
+                <div className=" mr-1">
+                  {" "}
+                  <StarsIcon />{" "}
+                </div>
                 <div className=""> Orders</div>
               </div>
               <div className=""> Unlimited</div>
             </div>
             <div className="flex row justify-between mt-5">
               <div className="flex">
-                <div className="mr-1"> <StarsIcon/> </div>
+                <div className="mr-1">
+                  {" "}
+                  <StarsIcon />{" "}
+                </div>
                 <div className=""> Images</div>
               </div>
               <div className=""> Unlimited</div>
             </div>
             <div className="flex row justify-between mt-5">
               <div className="flex">
-                <div className="mr-1"> <StarsIcon/> </div>
+                <div className="mr-1">
+                  {" "}
+                  <StarsIcon />{" "}
+                </div>
                 <div className=""> Members</div>
               </div>
               <div className=""> 1/4</div>

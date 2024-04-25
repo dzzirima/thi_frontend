@@ -9,9 +9,9 @@ export default function TopBar() {
       <div className="rightSide">
         <HeadingGroup>
           <Typography variant="h4" className="text-blue-600">
-            Parcel Express
+            Delivery Express
           </Typography>
-          {/* <Heading>Parcel Express</Heading> */}
+          {/* <Heading>DeliveryExpress</Heading> */}
           <Text size="sm" muted>
             The leaders in arbitrary fast delivery since 1920
           </Text>

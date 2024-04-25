@@ -15,6 +15,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import SubmitButton from "@/app/ui/utils/components/submit-button";
 import AddClient from "./client-entry";
 import MyDatePicker from "@/app/ui/utils/my-date-picker";
+import Link from "next/link";
 
 export default function NewOrderForm() {
   const initialState: State = { message: "", errors: {} };
@@ -27,9 +28,12 @@ export default function NewOrderForm() {
             <Typography variant="h6"> New Delivery</Typography>
           </div>
           <div className="">
-            <IconButton>
+          <Link href="/dashboard">
+          <IconButton>
               <HomeIcon />
             </IconButton>
+        </Link>
+            
           </div>
         </div>
         <Card className="p-4" elevation={1} variant="outlined">

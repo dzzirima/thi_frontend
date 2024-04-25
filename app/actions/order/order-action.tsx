@@ -66,14 +66,14 @@ export async function createOrder(prevState: State, formData: FormData) {
   if(createClientRes.status != 201){
     return {
        errors:{},
-      message: 'API  Failed to Create Invoice.',
+      message: 'API Error',
     };
   }
   } catch (error) {
     // If a database error occurs, return a more specific error.
     return {
       errors:{},
-      message: 'Database Error: Failed to Create client .',
+      message: 'Database Error: Failed to Delivery.',
     };
   }
     // Revalidate the cache for the invoices page and redirect the user.

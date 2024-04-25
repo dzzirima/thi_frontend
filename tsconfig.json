@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ui/utils/table-component.jsx", "app/ui/utils/columns/order-columns.jsx", "app/ui/orders/new-order-form.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ui/utils/table-component.jsx", "app/ui/utils/columns/order-columns.jsx", "app/ui/orders/new-order-form.jsx", "app/ui/orders/time-lines.jsx", "app/ui/orders/bulk-edit-order.jsx"],
   "exclude": ["node_modules"]
 }

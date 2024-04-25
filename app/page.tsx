@@ -6,7 +6,7 @@ import Footer from "./ui/navigation/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen  p-2 ">
+    <main className="min-h-screen  p-2 pb-2 ">
 
       <TopBar/>
       <CenterBlock/>

@@ -4,39 +4,33 @@ export const orderColumns = [
   {
     accessorKey: "orderNumber", //access nested data with dot notation
     header: "Id",
-    size: 150,
+    size: 100,
   },
   {
     accessorKey: "clientName", //normal accessorKey
     header: "clientName",
-    size: 200,
+    size: 150,
   },
   {
     accessorKey: "amount",
     header: "amount",
-    size: 150,
+    size: 50,
   },
 
   {
-    accessorKey: "amount",
-    header: "amount",
-    size: 150,
-  },
-
-  {
-    accessorKey: "Date",
+    accessorKey: "date",
     header: "Date",
-    size: 150,
+    size: 100,
   },
   {
     accessorKey: "globalStatus",
     header: "Status",
-    size: 150,
+    size: 50,
   },
   {
     accessorKey: "paymentStatus",
     header: "Payment status",
-    size: 150,
+    size: 50,
   },
 
   // {
