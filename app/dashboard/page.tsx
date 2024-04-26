@@ -58,7 +58,7 @@ export default function DashBoard() {
             <Divider className="mt-10" />
             <div className="flex w-full   ">
               <div className="flex flex-row w-full justify-between p-10">
-                <div className="title flex"> Order</div>
+                <div className="title flex"> deliveries </div>
                 <div className="addicon flex">
                   <Link href="/dashboard/orders/new">
                     <IconButton>

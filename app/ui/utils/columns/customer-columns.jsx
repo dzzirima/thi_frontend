@@ -18,5 +18,11 @@ export const customerColumns = [
     header: "phoneNumber",
     size: 100,
   },
+
+  {
+    accessorKey: "balance",
+    header: "$ Balance",
+    size: 100,
+  },
   
 ];

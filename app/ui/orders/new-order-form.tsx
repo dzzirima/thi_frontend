@@ -28,12 +28,11 @@ export default function NewOrderForm() {
             <Typography variant="h6"> New Delivery</Typography>
           </div>
           <div className="">
-          <Link href="/dashboard">
-          <IconButton>
-              <HomeIcon />
-            </IconButton>
-        </Link>
-            
+            <Link href="/dashboard">
+              <IconButton>
+                <HomeIcon />
+              </IconButton>
+            </Link>
           </div>
         </div>
         <Card className="p-4" elevation={1} variant="outlined">
@@ -56,7 +55,6 @@ export default function NewOrderForm() {
         </Card>
 
         <Card className="p-4 mt-2" elevation={1} variant="outlined">
-
           <Typography> Delivery Address</Typography>
           <TextField
             name="deliveryAddress"
@@ -69,10 +67,28 @@ export default function NewOrderForm() {
             state.errors.deliveryAddress.map((error: any) => (
               <p className="mt-1 text-sm text-red-500"> {error}</p>
             ))}
-            <MyDatePicker  label = "Estimated delivery date" name= 'estimatedDeliveryDate'/>
+          <MyDatePicker
+            label="Estimated delivery date"
+            name="estimatedDeliveryDate"
+          />
         </Card>
 
-
+        <Card className="p-4 mt-2" elevation={1} variant="outlined">
+          <Typography> Delivery Price</Typography>
+          <TextField
+          type="number"
+            name="deliveryCost"
+            size="small"
+            variant="outlined"
+            className="mt-2 w-full"
+            label="deliveryCost"
+          />
+          {state.errors?.deliveryCost &&
+            state.errors.deliveryCost.map((error: any) => (
+              <p className="mt-1 text-sm text-red-500"> {error}</p>
+            ))}
+         
+        </Card>
         <SubmitButton label={"Create"} />
       </div>
     </form>

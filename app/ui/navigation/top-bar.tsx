@@ -9,11 +9,15 @@ export default function TopBar() {
       <div className="rightSide">
         <HeadingGroup>
           <Typography variant="h4" className="text-blue-600">
-            Delivery Express
+            Delivery Guy
           </Typography>
           {/* <Heading>DeliveryExpress</Heading> */}
-          <Text size="sm" muted>
+          {/* <Text size="sm" muted>
             The leaders in arbitrary fast delivery since 1920
+          </Text> */}
+
+           <Text size="sm" muted>
+            You call us , we deliver 
           </Text>
         </HeadingGroup>
       </div>

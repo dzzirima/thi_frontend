@@ -15,6 +15,7 @@ const FormSchema = z.object({
   phoneNumber: z.string().min(1 ,"email cant be empty !!"),
   description: z.string().min(1 ,"description cant be empty !!"),
   deliveryAddress: z.string().min(1, "delivery address cant be empty !!"),
+  deliveryCost: z.string().min(1, "delivery address cant be empty !!"),
   estimatedDeliveryDate: z.string().datetime(),
 
 });
@@ -28,6 +29,7 @@ export type State = {
     description?:String[];
     deliveryAddress?: String[];
     estimatedDeliveryDate?: String[];
+    deliveryCost?: String[];
    
   };
   message?: string | null;

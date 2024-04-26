@@ -46,7 +46,9 @@ export default function UpdateOrderStatusForm() {
               >
                 <option value="PENDING">Pending</option>
                 <option value="CORNFIRMED">Cornfirmed</option>
-                <option value="FULLFIED">Fullfied</option>
+                <option value="PICKED">Picked</option>
+                <option value="IN TRANSIT">IN TRANSIT</option>
+                <option value="DELIVERED">Delivered</option>
                 <option value="CANCELLED">Cancelled </option>
               </select>
             </div>
