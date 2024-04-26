@@ -84,13 +84,11 @@ const CustomerProfileData = () => {
         <Link href={`/dashboard/customers/1/edit`} className="flex items-end justify-end">
           <Button  variant="contained">Edit</Button>
         </Link>
-
         </div>
       </div>
       <div className="flex flex-col mt-3">
         <Divider textAlign="right">
         </Divider>
-    
         <div className="mt-3">
         <TableComponent
           data={orderData}
