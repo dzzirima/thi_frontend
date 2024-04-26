@@ -13,6 +13,8 @@ import FlashOnIcon from "@mui/icons-material/FlashOn";
 import StarsIcon from "@mui/icons-material/Stars";
 import Card from "@mui/material/Card";
 import Link from "next/link";
+import MyMap from "./map/page";
+
 
 export default function DashBoard() {
   return (
@@ -84,6 +86,13 @@ export default function DashBoard() {
               </div>
               <div className="content">2 Unpaid payments</div>
             </div>
+
+            <div className="mt-2">
+
+            <MyMap/>
+            </div>
+             
+            
           </div>
         </div>
         <div className=" flex w-1/4 flex-col">
@@ -110,8 +119,7 @@ export default function DashBoard() {
             <div className="flex row justify-between mt-10">
               <div className="flex">
                 <div className=" mr-1">
-                  {" "}
-                  <StarsIcon />{" "}
+                  <StarsIcon />
                 </div>
                 <div className=""> Orders</div>
               </div>
@@ -120,8 +128,7 @@ export default function DashBoard() {
             <div className="flex row justify-between mt-5">
               <div className="flex">
                 <div className="mr-1">
-                  {" "}
-                  <StarsIcon />{" "}
+                  <StarsIcon />
                 </div>
                 <div className=""> Images</div>
               </div>
@@ -130,13 +137,14 @@ export default function DashBoard() {
             <div className="flex row justify-between mt-5">
               <div className="flex">
                 <div className="mr-1">
-                  {" "}
-                  <StarsIcon />{" "}
+                  <StarsIcon />
                 </div>
                 <div className=""> Members</div>
               </div>
               <div className=""> 1/4</div>
             </div>
+
+            
 
             {/* </Card> */}
           </div>
