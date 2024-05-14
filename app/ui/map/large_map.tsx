@@ -4,7 +4,10 @@ import L from 'leaflet'
 // import MarkerIcon from '../node_modules/leaflet/dist/images/marker-icon.png'
 // import MarkerShadow from '../node_modules/leaflet/dist/images/marker-shadow.png'
 
-import MarkerIcon from "@/assets/marker.png"
+import MarkerIcon from '@/assets/marker-icon.png'
+import MarkerShadow from '@/assets/marker-shadow.png'
+
+// import MarkerIcon from "@/assets/marker.png"
 
 
 import 'leaflet/dist/leaflet.css'
@@ -59,10 +62,10 @@ const LargeMap = () => {
                     new L.Icon({
                         iconUrl: MarkerIcon.src,
                         iconRetinaUrl: MarkerIcon.src,
-                        iconSize: [40, 41],
+                        iconSize: [29, 41],
                         iconAnchor: [12.5, 41],
                         popupAnchor: [0, -41],
-                        // shadowUrl: MarkerShadow.src,
+                        shadowUrl: MarkerShadow.src,
                         shadowSize: [41, 41],
                     })
                 } position={[-17.831630114685986, 31.04728862296827]}>
@@ -79,10 +82,10 @@ const LargeMap = () => {
                     new L.Icon({
                         iconUrl: MarkerIcon.src,
                         iconRetinaUrl: MarkerIcon.src,
-                        iconSize: [40, 41],
+                        iconSize: [29, 41],
                         iconAnchor: [12.5, 41],
                         popupAnchor: [0, -41],
-                        // shadowUrl: MarkerShadow.src,
+                        shadowUrl: MarkerShadow.src,
                         shadowSize: [41, 41],
                     })
                 } position={[-17.78226109067238, 31.05456469413167]}>
