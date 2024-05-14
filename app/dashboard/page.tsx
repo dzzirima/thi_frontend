@@ -143,9 +143,6 @@ export default function DashBoard() {
               </div>
               <div className=""> 1/4</div>
             </div>
-
-            
-
             {/* </Card> */}
           </div>
         </div>

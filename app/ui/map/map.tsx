@@ -12,13 +12,6 @@ import { Button } from '@mui/material'
 const Map = () => {
     const [coord, setCoord] = useState([-17.82772 ,31.05337])
 
-    // const SearchLocation = () => {
-    //     return (
-    //         <div className="search-location">
-    //             <input type="text" placeholder="Search Location" />
-    //         </div>
-    //     )
-    // }
 
     const GetMyLocation = () => {
         const getMyLocation = () => {
@@ -43,8 +36,8 @@ const Map = () => {
         <div>
             {/* <SearchLocation /> */}
             {/* <GetMyLocation /> */}
-            <Link href="/dashboard/map" className=''>
-          <Button  variant="contained">View Deliveries Map</Button>
+            <Link href="/dashboard/largemap" className=''>
+          <Button  variant="contained">Map View</Button>
         </Link>
             <MapContainer style={{
                 // height: '100vh',
