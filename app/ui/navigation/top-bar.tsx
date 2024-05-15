@@ -23,7 +23,10 @@ export default function TopBar() {
       </div>
       <div className=" flex leftSide space-x-4">
         <div>
+          <Link href= "/login">
           <Button variant="text">Login</Button>
+          </Link>
+        
         </div> 
         <div>
           <Button variant="outlined">Contact Us</Button>
