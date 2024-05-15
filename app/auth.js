@@ -6,12 +6,7 @@ import jwt from "jsonwebtoken";
 import email from "next-auth/providers/email";
 
 const login = async (credentials) => {
-
-
-
-  
   try {
-   
     let loginRes = await axios.post(`${process.env.API_URL}/user/signin`, {
       userName: credentials.userName,
       password: credentials.password,
@@ -22,33 +17,24 @@ const login = async (credentials) => {
 
     // console.log(loginRes)
 
- 
+    let { token } = loginRes.data.data;
+    let userData = loginRes.data.data;
 
-    let { token } = loginRes.data;
-    let userData = loginRes.data.data
-
-    console.log(token)
-
-
+    // console.log(token)
 
     var decoded = await jwt.decode(token);
-
-    
 
     let user = { ...userData, token: token };
 
     // return user;
 
-    if(loginRes.status == 200){
-
+    if (loginRes.status == 200) {
       return user;
-    }else{
-      throw new Error("Failed to login")
+    } else {
+      throw new Error("Failed to login");
     }
 
     // if (!user || !user.isAdmin) throw new Error("Wrong credentials!");
-
-
   } catch (err) {
     console.log(err);
     throw new Error("Failed to login!");
