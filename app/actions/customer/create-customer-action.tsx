@@ -10,7 +10,7 @@ function delay(ms: number) {
 }
 
 const FormSchema = z.object({
-  customerName: z.string().min(1, "Customer Name is required"),
+  name: z.string().min(1, "Customer Name is required"),
   email: z.string().min(1, "Email is required "),
   phoneNumber: z.string().min(1, "Phone Number is required "),
   address: z.string().min(1, "Address is required "),
@@ -20,7 +20,7 @@ const FormSchema = z.object({
 
 export type State = {
   errors?: {
-    customerName?: String[];
+    name?: String[];
     email?: String[];
     phoneNumber?: String[];
     address?: String[];
@@ -47,7 +47,7 @@ export async function addCustomerAction(prevState: State, formData: FormData) {
 
     const createCustomer = await BackendInstance.post("/user/signup", {
       ...data,
-      password: data.customerName + "test123",
+      password: data.name + "test123",
     });
     let createCrmOfficerRes = createCustomer.data.data;
   } catch (error) {

@@ -35,14 +35,14 @@ export default function NewCustomerForm() {
 
       <div className="flex flex-col justify-center mt-5 sm:mx-auto sm:w-full sm:max-w-md">
         <TextField
-          name="customerName"
+          name="name"
           size="small"
           variant="outlined"
           label="First Name"
           className="mb-2"
         />
-        {state.errors?.customerName &&
-          state.errors.customerName.map((error: any) => (
+        {state.errors?.name &&
+          state.errors.name.map((error: any) => (
             <p className="mt-2 text-sm text-red-500"> {error}</p>
           ))}
 
