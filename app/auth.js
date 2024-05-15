@@ -1,9 +1,10 @@
+
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { authConfig } from "@/app/authconfig";
 import axios from "axios";
 import jwt from "jsonwebtoken";
-import email from "next-auth/providers/email";
+
 
 const login = async (credentials) => {
   try {
@@ -14,7 +15,6 @@ const login = async (credentials) => {
       // "email":"crm@gmail.com",
       // "password":"crm"
     });
-
     // console.log(loginRes)
 
     let { token } = loginRes.data.data;

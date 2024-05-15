@@ -3,7 +3,7 @@
 export const customerColumns = [
   
   {
-    accessorKey: "clientName", //normal accessorKey
+    accessorKey: "name", //normal accessorKey
     header: "clientName",
     size: 150,
   },
