@@ -13,7 +13,7 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
-    name: 'Orders',
+    name: 'Deliveries',
     href: '/dashboard/orders',
     icon: ReceiptIcon,
   },

@@ -47,7 +47,7 @@ export default function DashBoard() {
               <SummaryCard
                 icon={<ReorderIcon color="success" />}
                 success={true}
-                title=" Orders"
+                title=" Deliveries "
                 value={200}
               />
               <SummaryCard
@@ -121,7 +121,7 @@ export default function DashBoard() {
                 <div className=" mr-1">
                   <StarsIcon />
                 </div>
-                <div className=""> Orders</div>
+                <div className=""> Deliveries</div>
               </div>
               <div className=""> Unlimited</div>
             </div>
