@@ -16,29 +16,14 @@ export default function LoginForm() {
   const [state, dispatch] = useFormState(loginAction, initialState);
   return (
     <div className="flex min-h-screen  items-center justify-center">
-         <Card
-          className="p-4  w-1/4 flex  flex-col "
-          elevation={1}
-          variant="outlined"
-        >
-          <div className="">
+      <Card
+        className="p-4  w-1/4 flex  flex-col "
+        elevation={1}
+        variant="outlined"
+      >
+        <div className=""></div>
 
-          
-
-
-
-
-
-          </div>
-
-
-
-
-        <form
-          
-          action={dispatch}
-          method="POST"
-        >
+        <form action={dispatch} method="POST">
           <div>
             <div>
               <label
@@ -76,8 +61,7 @@ export default function LoginForm() {
           <hr />
 
           <div>
-            
-            <SubmitButton label="Sign In"/>
+            <SubmitButton label="Sign In" />
             {state?.message && (
               <p className="mt-2 text-sm text-red-500"> {state?.message}</p>
             )}
@@ -99,7 +83,7 @@ export default function LoginForm() {
             </a>
           </div> */}
         </form>
-        </Card>
+      </Card>
     </div>
   );
 }

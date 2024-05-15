@@ -3,7 +3,7 @@ import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 // import { signIn } from "@/app/auth";
-// import { authenticate } from "@/app/service/signout";
+import { authenticate } from "@/app/actions/auth/signout";
 
 // zod schema defination
 function delay(ms:number) {
@@ -33,6 +33,8 @@ export async function loginAction(prevState: State, formData: FormData) {
 
   const rawDataFromEntries = Object.fromEntries(formData.entries());
 
+  
+
 
   const validateFields = ValidateLoginObject.safeParse(rawDataFromEntries);
 
@@ -52,10 +54,10 @@ export async function loginAction(prevState: State, formData: FormData) {
   try {
     // posting to api
 
-    // let authenticateRes = await authenticate({
-    //   "userName":data.email,
-    //   "password":data.password
-    // })
+    let authenticateRes = await authenticate({
+      "userName":data.email,
+      "password":data.password
+    })
     
    
    

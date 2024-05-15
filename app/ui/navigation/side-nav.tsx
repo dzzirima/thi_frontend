@@ -4,7 +4,7 @@ import NavLinks from './nav-links';
 import CompanyLogo from "@/app/ui/navigation/company-logo"
 
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-// import { signOutAction } from '@/app/service/signout';
+import { signOutAction } from '@/app/actions/auth/signout';
 
 export default function SideNav() {
   return (
@@ -23,7 +23,7 @@ export default function SideNav() {
         <form
           action={async () => {
             'use server';
-            // await signOutAction();
+            await signOutAction();
           }}
         >
           <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
