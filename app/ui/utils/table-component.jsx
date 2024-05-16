@@ -30,36 +30,24 @@ export default function TableComponent({
     
     muiTableBodyCellProps: ({ cell }) => ({
       onDoubleClick: (event) => {
-        console.log(cell.row.original.orderNumber);
-        handleRowClick( JSON.stringify( cell.row.original.orderNumber));
+        console.log(cell.row.original.id);
+        handleRowClick(  cell.row.original.id);
       },
     }),
     renderTopToolbarCustomActions: ({ table }) => (
 
       <div>
-      {/* <Button
-        onClick={() => {
-          const rowSelection = table.getState().rowSelection; //read state
-          const selectedRows = table.getSelectedRowModel().rows; //or read entire rows
-
-          let selectedIds = selectedRows.map((selectedRow)=>(selectedRow.original.orderNumber))
-
-          console.log(selectedIds)
-        }}
-      >
-        Download Selected Users
-      </Button> */}
 
       <BuldOrderEdit  selectedRows = {table.getSelectedRowModel().rows}/>
 
       </div>
     ),
-    muiTableBodyRowProps:({row}) =>({
-      sx: {
-        backgroundColor: row.getValue('totalOpen') > 5 ? 'rgba(255, 54, 33, 0.18)' : '',
-        // fontStyle: 'italic'
-      }
-    }),
+    // muiTableBodyRowProps:({row}) =>({
+    //   sx: {
+    //     backgroundColor: row.getValue('totalOpen') > 5 ? 'rgba(255, 54, 33, 0.18)' : '',
+    //     // fontStyle: 'italic'
+    //   }
+    // }),
     enableRowSelection: true,
 
   });

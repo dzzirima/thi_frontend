@@ -228,7 +228,7 @@ export default function DeliveriesTable(){
         if (error) return <div>failed to load {error}</div>;
         if (isLoading) return <div>loading...</div>;
         return (
-          <MyTableTemplate
+          <TableComponent
             data={data}
             tableColumns={orderColumns}
             tableHieght={null}

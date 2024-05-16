@@ -3,11 +3,12 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import UpdateOrderStatusForm from "./update-order-status-form";
+import BulkUpdateOrderStatusForm from "./bulk_update-order-status-form";
 
 
 export default function BuldOrderEdit({selectedRows}) {
 
-  let selectedIds = selectedRows.map((selectedRow)=>(selectedRow.original.orderNumber))
+  let selectedIds = selectedRows.map((selectedRow)=>(selectedRow.original.id))
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -47,7 +48,7 @@ export default function BuldOrderEdit({selectedRows}) {
               </div>
               {/* <AddClientForm /> */}
 
-              <UpdateOrderStatusForm/>
+              <BulkUpdateOrderStatusForm order={JSON.stringify(selectedIds)} />
             </div>
           </div>
         </div>
