@@ -35,28 +35,13 @@ export type State = {
   message?: string | null;
 };
 
-export async function createOrder(prevState: State, formData: FormData) {
+export async function updateOrder(prevState: State, formData: FormData) {
  
   const rawDataFromEntries = Object.fromEntries(formData.entries());
-
-  const validateFields = CreateClient.safeParse(rawDataFromEntries);
-
-
-
-  
-
-  if (!validateFields.success) {
-    return {
-      errors: validateFields.error.flatten().fieldErrors,
-      message: "Misssing Fields . Failed to create client ",
-    };
-  }
-
-  let formDataFields = validateFields.data;
   
   try {
    
-  let createDeliveryRes = await BackendInstance.post("/client-order" , formDataFields)
+  let createDeliveryRes = await BackendInstance.patch("/client-order" , rawDataFromEntries)
 
   if(createDeliveryRes.status != 201){
     return {
@@ -72,7 +57,7 @@ export async function createOrder(prevState: State, formData: FormData) {
     };
   }
     // Revalidate the cache for the invoices page and redirect the user.
-  revalidatePath("/dashboard/orders");
-  redirect("/dashboard/orders");
+  revalidatePath(`/dashboard/orders/`);
+  redirect(`/dashboard/orders/`);
   
 }

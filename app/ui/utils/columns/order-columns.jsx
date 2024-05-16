@@ -2,13 +2,13 @@
 
 export const orderColumns = [
   {
-    accessorKey: "orderNumber", //access nested data with dot notation
-    header: "Id",
+    accessorKey: "id", //access nested data with dot notation
+    header: "Delivery Id",
     size: 100,
   },
   {
-    accessorKey: "clientName", //normal accessorKey
-    header: "clientName",
+    accessorKey: "customerName", //normal accessorKey
+    header: "Client Name",
     size: 150,
   },
   {
@@ -18,17 +18,17 @@ export const orderColumns = [
   },
 
   {
-    accessorKey: "date",
-    header: "Date",
+    accessorKey: "orderPlacedDate",
+    header: "Date Placed",
     size: 100,
   },
   {
-    accessorKey: "globalStatus",
+    accessorKey: "globalStep",
     header: "Status",
     size: 50,
   },
   {
-    accessorKey: "paymentStatus",
+    accessorKey: "orderPaymentStatus",
     header: "Payment status",
     size: 50,
   },

@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useFormState } from "react-dom";
-import { createOrder, State } from "@/app/actions/order/order-action";
+import { updateOrder, State } from "@/app/actions/order/update_order_action";
 import HomeIcon from "@mui/icons-material/Home";
 
 import SubmitButton from "@/app/ui/utils/components/submit-button";
@@ -19,9 +19,11 @@ import MyDatePicker from "@/app/ui/utils/my-date-picker";
 import Link from "next/link";
 import AddTimeSeriesForm from "./update-order-time-sereis-form";
 
-export default function UpdateOrderStatusForm() {
+export default function UpdateOrderStatusForm(order:{
+  order:any
+}) {
   const initialState: State = { message: "", errors: {} };
-  const [state, dispatch] = useFormState(createOrder, initialState);
+  const [state, dispatch] = useFormState(updateOrder, initialState);
   return (
     <form action={dispatch} className="w-full">
       <div className="flex flex-col  w-full">
@@ -38,16 +40,18 @@ export default function UpdateOrderStatusForm() {
               >
                 status
               </label>
+
+              <input name="orderId" defaultValue={order.order.id} hidden />
               <select
                 id="status"
-                name="status"
+                name="globalStep"
                 className=" border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
-                defaultValue={""}
+                defaultValue= {order.order.globalStep}
               >
                 <option value="PENDING">Pending</option>
                 <option value="CORNFIRMED">Cornfirmed</option>
                 <option value="PICKED">Picked</option>
-                <option value="IN TRANSIT">IN TRANSIT</option>
+                <option value="IN_TRANSIT">IN TRANSIT</option>
                 <option value="DELIVERED">Delivered</option>
                 <option value="CANCELLED">Cancelled </option>
               </select>
@@ -62,9 +66,9 @@ export default function UpdateOrderStatusForm() {
               </label>
               <select
                 id="status"
-                name="status"
+                name="orderPaymentStatus"
                 className=" border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
-                defaultValue={""}
+                defaultValue={order.order.orderPaymentStatus}
               >
                 <option value="UNPAID">Unpaid</option>
                 <option value="CONFIRMING_PAYMENT">Confirm Payment</option>
@@ -83,7 +87,8 @@ export default function UpdateOrderStatusForm() {
             className="mt-2"
             size="small"
             fullWidth
-            placeholder=" 2 Boxes of 2 x 6 wood blocks "
+            placeholder={order.order.description}
+            defaultValue={order.order.description}
             id="fullWidth"
           />
           <Divider className="m-3" />
