@@ -32,7 +32,7 @@ export default function TopBar() {
           <Button variant="outlined">Contact Us</Button>
         </div>
         <div>
-        <Link href="/dashboard">
+        <Link href="/signup">
           <Button  variant="contained">Get Started</Button>
         </Link>
           {/* <Button type="" variant="contained">Get Started</Button> */}

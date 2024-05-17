@@ -11,6 +11,12 @@ export const orderColumns = [
     header: "Client Name",
     size: 150,
   },
+
+  {
+    accessorKey: "description", //normal accessorKey
+    header: "Description",
+    size: 150,
+  },
   {
     accessorKey: "amount",
     header: "amount",

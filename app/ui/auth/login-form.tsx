@@ -7,7 +7,7 @@ import { useFormState } from "react-dom";
 import login_picture from "@/assets/delivery_login.png";
 
 import PasswordTextField from "./password";
-import { Card } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import SubmitButton from "../utils/components/submit-button";
 
 export default function LoginForm() {
@@ -21,7 +21,7 @@ export default function LoginForm() {
         elevation={1}
         variant="outlined"
       >
-        <div className=""></div>
+        <div className="flex justify-center mb-3"> <Typography variant="h6"> Login  Your Account </Typography></div>
 
         <form action={dispatch} method="POST">
           <div>
@@ -74,14 +74,14 @@ export default function LoginForm() {
               Forgot password?
             </a> */}
           </div>
-          {/* <div className="text-sm">
+          <div className="text-sm mt-3 flex justify-center">
             <a
-              href="#"
-              className="font-semibold text-indigo-600 hover:text-indigo-500"
+              href="/signup"
+              className="font-semibold text-black-600 hover:text-indigo-500"
             >
               I do not have an account
             </a>
-          </div> */}
+          </div>
         </form>
       </Card>
     </div>

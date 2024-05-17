@@ -41,9 +41,9 @@ export async function bulkUpdateOrder(prevState: State, formData: FormData) {
   
   try {
 
-    return console.log(rawDataFromEntries)
+    //return console.log(rawDataFromEntries)
     
-  let createDeliveryRes = await BackendInstance.patch("/client-order" , rawDataFromEntries)
+  let createDeliveryRes = await BackendInstance.patch("/client-order/bulkUpdate" , rawDataFromEntries)
 
   if(createDeliveryRes.status != 201){
     return {

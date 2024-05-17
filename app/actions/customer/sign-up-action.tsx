@@ -12,7 +12,9 @@ function delay(ms: number) {
 const FormSchema = z.object({
   name: z.string().min(1, "Customer Name is required"),
   email: z.string().min(1, "Email is required "),
+ 
   phoneNumber: z.string().min(1, "Phone Number is required "),
+  password: z.string().min(1, "Password is required "),
   address: z.string().min(1, "Address is required "),
 });
 
@@ -21,14 +23,16 @@ const FormSchema = z.object({
 export type State = {
   errors?: {
     name?: String[];
+
     email?: String[];
     phoneNumber?: String[];
+    password?: String[];
     address?: String[];
   };
   message?: string | null;
 };
 
-export async function addCustomerAction(prevState: State, formData: FormData) {
+export async function signUpAction(prevState: State, formData: FormData) {
   const rawDataFromEntries = Object.fromEntries(formData.entries());
 
   // await delay( 1000)
@@ -45,9 +49,13 @@ export async function addCustomerAction(prevState: State, formData: FormData) {
   try {
     let data = validateFields.data;
 
-    const createCustomer = await BackendInstance.post("/user/addCustomer", {
+
+   console.log(data)
+
+    const createCustomer = await BackendInstance.post("/user/signup", {
       ...data,
-      password: data.name + "test123",
+      role:"AGENT"
+
     });
     let createCrmOfficerRes = createCustomer.data.data;
   } catch (error) {
@@ -59,8 +67,7 @@ export async function addCustomerAction(prevState: State, formData: FormData) {
   }
 
   // Revalidate the cache for the invoices page and redirect the user.
-  revalidatePath("/dashboard/customers");
-  redirect("/dashboard/customers");
+  redirect("/login");
 }
 
 // creation of a system user

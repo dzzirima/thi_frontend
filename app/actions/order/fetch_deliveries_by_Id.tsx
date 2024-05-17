@@ -9,7 +9,7 @@ export   async function getDeliveryById(deliveryId: string) {
   
       let delivery = getDeliveryRes.data.data;
 
-      console.log(delivery)
+      // console.log(delivery)
       return delivery
       
     } catch (error) {

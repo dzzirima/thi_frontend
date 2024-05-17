@@ -40,7 +40,7 @@ export default function BulkUpdateOrderStatusForm(order: { order: any }) {
                 status ffff
               </label>
 
-              <input name="orderId" defaultValue={order.order} hidden />
+              <input name="bulkUpdateOrderIds" defaultValue={order.order} hidden />
               <select
                 id="status"
                 name="globalStep"
