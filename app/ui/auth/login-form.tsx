@@ -76,7 +76,7 @@ export default function LoginForm() {
           </div>
           <div className="text-sm mt-3 flex justify-center">
             <a
-              href="/signup"
+              href="/"
               className="font-semibold text-black-600 hover:text-indigo-500"
             >
               I do not have an account
