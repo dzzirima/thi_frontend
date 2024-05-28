@@ -16,7 +16,6 @@ import Card from "@mui/material/Card";
 import Link from "next/link";
 import MyMap from "./map/page";
 
-
  function DashBoard() {
   return (
     <div className="flex flex-col">
