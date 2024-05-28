@@ -1,3 +1,4 @@
+"use client"
 import { Button, IconButton, Paper, Typography } from "@mui/material";
 import MyDatePicker from "@/app/ui/utils/my-date-range-picker";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -16,7 +17,7 @@ import Link from "next/link";
 import MyMap from "./map/page";
 
 
-export default function DashBoard() {
+ function DashBoard() {
   return (
     <div className="flex flex-col">
       <div className="font-black">
@@ -150,3 +151,5 @@ export default function DashBoard() {
     </div>
   );
 }
+
+export default DashBoard

@@ -52,7 +52,9 @@ const LargeMap = () => {
                 width: '100vw',
                 // width:"800px",
                 // height :"200px"
-            }} center={coord} zoom={13} scrollWheelZoom={true}>
+            }} 
+            //@ts-ignore
+            center={coord} zoom={13} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
