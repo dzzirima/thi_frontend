@@ -150,5 +150,4 @@ import MyMap from "./map/page";
     </div>
   );
 }
-
 export default DashBoard
